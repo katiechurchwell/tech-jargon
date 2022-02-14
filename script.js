@@ -140,13 +140,21 @@ function randGen() {
 function sentence() {
   var random = Math.floor(Math.random() * 10);
 
-  console.log(action[random]);
+  var randomAction = action[random];
+  var capitalizedAction =
+    randomAction.charAt(0).toUpperCase() + randomAction.slice(1);
+
   var content =
-    action[random] + " " +
-    adjective[random] + " " +
-    noun[random] + " " +
-    expression[random] + " " +
-    result[random];
+    capitalizedAction +
+    " " +
+    adjective[random] +
+    " " +
+    noun[random] +
+    " " +
+    expression[random] +
+    " " +
+    result[random] +
+    ".";
 
   document.getElementById("sentence").innerHTML = content;
 }

@@ -133,27 +133,27 @@ var result = [
   "native integration",
 ];
 
-function randGen() {
-  return Math.floor(Math.random() * 5);
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
 }
 
 function sentence() {
-  var random = Math.floor(Math.random() * 10);
+  var random = getRandomInt(action.length);
 
-  var randomAction = action[random];
+  var randomAction = action[getRandomInt(action.length)];
   var capitalizedAction =
     randomAction.charAt(0).toUpperCase() + randomAction.slice(1);
 
   var content =
     capitalizedAction +
     " " +
-    adjective[random] +
+    adjective[getRandomInt(adjective.length)] +
     " " +
-    noun[random] +
+    noun[getRandomInt(noun.length)] +
     " " +
-    expression[random] +
+    expression[getRandomInt(expression.length)] +
     " " +
-    result[random] +
+    result[getRandomInt(result.length)] +
     ".";
 
   document.getElementById("sentence").innerHTML = content;

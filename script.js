@@ -138,8 +138,6 @@ function getRandomInt(max) {
 }
 
 function sentence() {
-  var random = getRandomInt(action.length);
-
   var randomAction = action[getRandomInt(action.length)];
   var capitalizedAction =
     randomAction.charAt(0).toUpperCase() + randomAction.slice(1);
